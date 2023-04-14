@@ -1,0 +1,66 @@
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    grid-gap: 5px;
+    margin: 50px auto;
+    max-width: 500px;
+  }
+  
+  .square {
+    background-color: #ccc;
+    border: 1px solid #888;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .square.revealed {
+    background-color: #eee;
+    cursor: default;
+  }
+  
+  .square.mine {
+    background-color: #f00;
+  }
+  
+  .message-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s;
+  }
+  
+  .message-container.show {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .reset-button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #008CBA;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .reset-button:hover {
+    background-color: #005266;
+  }
+
